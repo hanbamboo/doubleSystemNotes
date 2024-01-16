@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<!-- CSS三种使用方式 
+	1.内联样式
+	2.内部样式
+	3.外部样式
+	-->
+	<head>
+		<meta charset="utf-8">
+		<title>CSS的使用方式</title>
+		<!-- 2.内部样式
+			-语法
+				在html当中添加一个style样式块
+				<style>
+					选择器{
+						样式名:样式值;
+						样式名:样式值;
+						样式名:样式值;
+						......
+					}
+				</style>
+				相比于内联样式，样式可以通过选择器得到复用。
+			-->
+		<style type="text/css">
+			.p3{
+				font-size: 30px;
+			}
+			.p4{
+				font-size: 26px;
+			}
+			/* 样式块可以有多个样式声明 */
+		</style>
+		<!-- 第三种，外部样式，通过link引入一个文件，这个文件是一个css文件，
+			这个文件内容是各种选择器+样式组成的 -->
+			<!-- 3.外部样式 
+				通过引入了一个link标签，可以相对值也可以绝对值-->
+		<link rel="stylesheet" type="text/css" href="css/012.css"/>
+	</head>
+	<body>
+		<!-- 1.内联样式
+			-语法
+				<标签 style="样式名:样式值;">静夜思</标签>
+				这种方式不推荐使用，因为如果多个标签有共同的样式
+				需要给每个标签或元素都要设置一个重复的style，复用性非常差
+			-->
+		<!-- 将静夜思改成红色 -->
+		<h1 style="color:coral;">静夜思</h1>
+		<h2>作者李白</h2>
+		<p style="color: lightgreen">窗前明月光，</p>
+		<p style="color: lightgreen">疑是地上霜。</p>
+		<p class="p3">举头望明月，</p>
+		<p class="p3">低头思故乡。</p>
+		<br>
+		<h1>咏鹅</h1>
+		<p class="p4">鹅鹅鹅</p>
+		<p>曲项向天歌</p>
+
+		
+	</body>
+</html>
+ 

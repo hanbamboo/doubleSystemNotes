@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wall {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-color: aquamarine;
+        }
+        
+        #box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: blueviolet;
+        }
+    </style>
+    <script>
+        var x = 0;
+        var y = 0;
+
+        function keyPre() {
+            console.log(event.keyCode);
+            //             119
+            // t.html:26 100
+            // t.html:26 115
+            // t.html:26 97
+            var key = event.keyCode;
+            var box = document.getElementById("box");
+            if (key == 119 && y > 0) {
+                y = y - 50;
+                box.style.top = y + "px";
+            }
+            if (key == 100 && x < 400) {
+                x = x + 50;
+                box.style.left = x + "px";
+            }
+            if (key == 115 && y < 400) {
+                y = y + 50;
+                box.style.top = y + "px";
+            }
+            if (key == 97 && x > 0) {
+                x = x - 50;
+                box.style.left = x + "px";
+            }
+
+        }
+    </script>
+</head>
+
+<body onkeypress="keyPre()">
+    <div id="wall">
+        <div id="box">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

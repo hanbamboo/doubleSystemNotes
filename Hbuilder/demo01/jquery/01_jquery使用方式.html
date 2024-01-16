@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- jquery安装方式 -->
+		<!-- 1.使用相对路径引入本项目当中的js文件 -->
+		<script src="jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 2.使用cdn，jq的绝对路径，一些外部的资源路径-->
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(
+				function () {
+					$("#p1").click(
+						function (){
+							alert(566);
+							
+						}
+					)
+					
+					
+				}
+			)
+		</script>
+	</head>
+	<body>
+		<p id="p1">这里是P的内容</p>
+	</body>
+</html>

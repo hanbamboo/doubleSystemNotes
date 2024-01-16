@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js对象</title>
+		<!-- js当中的对象
+				js当中的对象有属性和函数
+				1.内置对象
+				2.自定义对象
+				3.BOM、DOM对象
+			需要掌握的是内置对象和BOM、DOM对象
+			
+			内置对象：跟java中的类相似
+					js当中的内置对象是js开发者定义好的对象(类)，可以直接拿来用
+					常见的内置对象：Math、String、Date、Array
+		-->
+		<script type="text/javascript">
+			// PI是Math对象中的属性
+			console.log(Math.PI);
+			console.log(Math.E);
+			console.log(Math.abs(-4));
+			console.log(Math.random() * 1000);
+		</script>
+		<script type="text/javascript">
+			//获取当前年份
+			var date = new Date();
+
+			console.log(date.getFullYear());
+		</script>
+		<script type="text/javascript">
+			var arr = new Array(3);
+			arr[0] =2;
+			arr[1] =1;
+			arr[2] =3;
+			arr.sort();
+			console.log(arr)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

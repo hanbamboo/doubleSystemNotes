@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>盒子内边距
+		</title>
+		<style type="text/css">
+			/* padding以左上侧为基准 */
+			/* padding设置的是盒子的内容和边的距离
+				可以单独设置上下左右的内边距
+			 */
+			#div1 {
+				width: 200px;
+				height: 200px;
+				background-color: #18BC37;
+				border: 5px solid red;
+				padding: 20px;
+			}
+
+			#div2 {
+				width: 100px;
+				height: 100px;
+				background-color: #aaff7f;
+				padding: 10px;
+			}
+			#div3{
+				width: 50px;
+				height: 50px;
+				background-color: #ffaaff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">div1
+			<div id="div2">
+				div2
+				<div id="div3">
+					div3
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

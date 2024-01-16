@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>盒子外边距</title>
+		<!-- 外边距 外边的边和其他盒子的距离 -->
+		<!-- margin和padding类似，都是以父元素的左上角为基准 -->
+		<!-- margin-right 、 margin-bottom 不是没有用
+				它的大小会影响到其他盒子的距离-->
+		<style type="text/css">
+			#div1 {
+				width: 200px;
+				height: 200px;
+				background-color: #0066CC;
+				color: #00FFFF;
+				font-size: 30px;
+				border: coral 5px solid;
+				/* margin: 20px; */
+				padding: 20px;
+			}
+
+			#div2 {
+				width: 200px;
+				height: 200px;
+				background-color: #ffaaff;
+				color: #ffff00;
+				font-size: 30px;
+				border: #aaff00 5px solid;
+				/* margin: 20px; */
+				padding: 20px;
+				margin: 0 auto;
+				border-radius: 500px;
+			}
+
+			body {
+				background-color: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			div1
+		</div>
+		<div id="div2">
+			div2
+		</div>
+	</body>
+</html>

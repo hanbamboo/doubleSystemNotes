@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>相对定位</title>
+		<!-- relative相对定位
+			它是相对于自身所在的原位置
+				注意：相对定位移动的元素不会脱离文档流，而且不改变元素本身特性，也就是他原有的位置还被占用，底下的兄弟元素也不会随之移动
+		 -->
+		<style type="text/css">
+			#div1 {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+			/* 将div2向右移动200px向上移动200px */
+			#div2 {
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				position: relative;
+				left: 200px;
+				top: -200px;
+			}
+
+			#div3 {
+				width: 200px;
+				height: 200px;
+				background-color: green;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			
+		</div>
+		<div id="div2">
+			
+		</div>
+		<div id="div3">
+			
+		</div>
+	</body>
+</html>

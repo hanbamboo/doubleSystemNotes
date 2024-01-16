@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        input {
+            border: none;
+            border-bottom: 3px solid #b6b6b6;
+            font-size: 30px;
+            padding: 10px;
+            width: 100%;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #55aaff;
+        }
+        
+        form {
+            width: 300px;
+        }
+        
+        button {
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: #55aaff;
+            color: #FFFFFF;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        
+        label {
+            font-size: 30px;
+            color: #b6b6b6;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        
+        .box {
+            margin-top: 20px;
+            position: relative;
+        }
+        
+        input:focus+label,
+        input+label.show {
+            font-size: 15px;
+            color: #55aaff;
+            text-transform: uppercase;
+            top: -15px;
+            left: 10px;
+            transition: 0.2s;
+        }
+    </style>
+    <script>
+        function q() {
+            let show = "show";
+            var doc = document.getElementsByClassName("inputChek");
+            for (var i in doc) {
+                console.log(doc[i])
+                if (doc[i] !== "") {
+                    doc[i].addClass("show");
+                } else {
+                    doc[i].removeClass("show");
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div>
+        <form onkeypress="q()">
+            <div class="box">
+                <input type="text" id="firstName" class="inputChek" />
+                <label for="firstName">FirstName</label>
+            </div>
+            <div class="box">
+                <input type="text" id="lastname" class="inputChek" />
+                <label for="lastname">LastName</label>
+            </div>
+            <div class="box">
+                <input type="text" id="email" class="inputChek" />
+                <label for="email">Email</label>
+            </div>
+            <button>Start</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

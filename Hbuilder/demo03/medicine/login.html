@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background-color: #A4D6A6;
+				padding: 0;
+				margin: 0;
+				font-family: "arial,微软雅黑";
+
+			}
+
+			#footer {
+				margin-top: 150px;
+
+			}
+
+			.font-grey {
+				color: #B5BDCE;
+				font-weight: bold;
+				font-size: 20px;
+			}
+
+			.font-green {
+				color: #A4D6A6;
+				font-weight: bold;
+				font-size: 20px;
+				transition: 0.3s;
+				text-decoration: none;
+			}
+
+			#login_page {
+				background-color: #FFFFFF;
+				position: absolute;
+				top: 0px;
+				padding-top: 100px;
+				padding-right: 100px;
+				padding-left: 100px;
+				height: 80vh;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				box-shadow: 0 0 15px #adadad;
+				border-radius: 10px;
+			}
+
+			.title {
+				color: #555555;
+				font-size: 32px;
+				margin-bottom: 10px;
+			}
+
+			.show-title:hover {
+				color: #87af87;
+				cursor: pointer;
+			}
+
+			.little-title {
+				font-weight: 700;
+				color: #555555;
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+
+			.input-div {
+				margin-top: 30px;
+			}
+
+			.little-div {
+				padding-bottom: 30px;
+			}
+
+			.input {
+				outline: none;
+				border: none;
+				border-radius: 15px;
+				background-color: #F3F6F9;
+				height: 60px;
+				width: 400px;
+				font-size: 16px;
+				color: #555555;
+				padding-left: 20px;
+				padding-right: 20px;
+				font-weight: 300;
+				transition: 0.2s;
+				margin-top: 5px;
+				letter-spacing: 5px;
+
+			}
+
+			.input::-webkit-input-placeholder {
+				color: #555555;
+			}
+
+			.input:focus {
+				background-color: #EBEDF3;
+			}
+
+			.forgetpwd {
+				float: right;
+				font-size: 16px;
+			}
+
+			.login {
+				background-color: #A4D6A6;
+				outline: none;
+				border: none;
+				color: #FFFFFF;
+				font-weight: 700;
+				font-size: 16px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 40px;
+				padding-right: 40px;
+				border-radius: 10px;
+				margin-top: 40px;
+				margin-right: 5px;
+				transition: 0.3s;
+			}
+
+			.login:hover {
+				background-color: #87af87;
+
+			}
+
+			.login-with {
+				background-color: #c8d8c2;
+				outline: none;
+				border: none;
+				color: #FFFFFF;
+				margin-left: 5px;
+				text-decoration: none;
+				font-weight: 700;
+				font-size: 16px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 40px;
+				padding-right: 40px;
+				border-radius: 10px;
+				margin-top: 40px;
+				transition: 0.3s;
+			}
+
+			.login-with:hover {
+				background-color: #A4D6A6;
+				color: #FFFFFF;
+			}
+
+			.footer-tools {
+				text-decoration: none;
+			}
+
+			.footer-tools:hover {
+				text-decoration: none;
+				color: #87af87;
+				cursor: pointer;
+			}
+
+			.margin-horizontal-20 {
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="login_page">
+			<form action="checkUser" method="get">
+				<div class="little-div">
+				
+					<h3 class="title"> Welcome to MedicineGod </h3>
+					<span class="font-grey">New Here?
+						<a class="font-green show-title" href="register">Create an Account</a>
+					</span>
+				</div>
+				<div class="input-div">
+					<label class="little-title">Email / LoginName / Phone</label>
+					<br>
+					<input class="input" id="u_lname" type="text" name="u_lname" placeholder="" autocomplete="off">
+
+				</div>
+
+				<div class="input-div">
+					<label class="little-title">Password</label>
+
+					<a class="font-green show-title forgetpwd">Forgot Password ?</a>
+
+
+
+					<br>
+					<input class="input" type="password" id="u_pwd" name="u_pwd" placeholder="" autocomplete="off">
+				</div>
+
+
+				<div>
+					<button class="login" onclick="return checkRule()"> Sign In </button>
+
+					<a class="login-with" href="">Sign in with WeChat</a>
+				</div>
+
+			</form>
+			<div id="footer">
+				<a class="font-green footer-tools margin-horizontal-20" href="#">AboutUs</a>
+				<a class="font-green footer-tools margin-horizontal-20" href="#">FeedBack</a>
+				<a class="font-green footer-tools margin-horizontal-20" href="#">Contact Us</a>
+			</div>
+
+		</div>
+	</body>
+
+</html>

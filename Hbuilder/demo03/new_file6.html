@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			#m_name {
+				font-size: 18px;
+				font-weight: bold;
+			}
+
+			#m_outdate {
+				font-size: 18px;
+			}
+		</style>
+		<script type="text/javascript">
+			function(){
+				if(var)
+			}
+		</script>
+	</head>
+	<body>
+
+		<div>
+			<table>
+
+				<tr>
+					<th></th>
+					<th class="m_moreCheck_t"> </td>
+					<th class="m_id_1">序号</td>
+					<th class="m_name_1">名称</td>
+					<th class="m_otc_1">标识</td>
+					<th class="m_outdate_1">过期时间</td>
+					<th class="m_company_1">公司</td>
+					<th class="m_barcode_1">条码</td>
+					<th class="m_love_1">收藏</td>
+					<th class="m_action_1">操作</td>
+					
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="m_moreCheck" class="m_moreCheck"/> </td>
+					<td><a id="m_id">序号</a> </td>
+					<td><a id="m_name">${m.name }</a> </td>
+					<td><a id="m_otc">${m.otc }</a></td>
+					<td><a id="m_outdate">${m.outdate }</a></td>
+					<td><a id="m_company">${m.company }</a></td>
+					<td><a id="m_barcode">${m.barcode }</a></td>
+					<td><a id="m_love">${m.love }</a></td>
+					<td><a id="m_action">···</a></td>
+					
+					
+				</tr>
+			
+			</table>
+
+
+			<a href="editMedicine?mid=${m.keyid}">编辑</a>
+			<a href="delMedicine?mid=${m.keyid}">删除</a>
+		</div>
+	</body>
+</html>

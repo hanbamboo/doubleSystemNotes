@@ -1,0 +1,125 @@
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 事件
+            -click 
+                鼠标单击
+            -dbclick
+                鼠标双击
+            -blur
+                失去焦点
+            -focus
+                获得焦点
+            -keydown
+                键盘按下
+            -keyup
+                键盘弹起
+            -mousemove
+                鼠标移动
+            -mouseover
+                鼠标移动到元素上
+            -mouse
+                鼠标移动到
+            -mousedown
+                鼠标按下
+            -mouseup
+                鼠标弹起
+            -mouseout
+                鼠标离开
+            -change
+                域内容改变
+            -select
+                内容被选择
+            -submit
+                提交
+            -reset
+                重置
+     -->
+    <!-- 事件前加一个on，他就变成了一个事件句柄 -->
+    <!-- 它可以作为一个标签或元素的属性，属性的值可以用来绑定一个行为
+        这个函数需要在js中实现。
+     -->
+    <!-- 鼠标单击弹框 -->
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+    <script>
+        function tc() {
+            alert("你打我啊");
+        }
+
+        function dbtc() {
+            alert("双击弹窗");
+        }
+
+        function tan1() {
+            alert("获得焦点");
+        }
+
+        function tan2() {
+            alert("失去焦点");
+        }
+
+        function changeColor() {
+            document.getElementById("span1").style.color = "red";
+        }
+
+        function mouseOver() {
+            document.getElementById("div1").style.backgroundColor = "red";
+        }
+
+        function mouseOut() {
+            document.getElementById("div1").style.backgroundColor = "blueviolet";
+        }
+
+        function KeyDown() {
+            alert("键盘按下了");
+        }
+
+        function KeyUp() {
+            alert("键盘弹起");
+        }
+
+        function textChange() {
+            alert("更改");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 一个元素上可以添加多个事件句柄 -->
+    <input type="button" value="点我一下" onclick="tc()">
+    <input type="button" value="点我两下" ondblclick="dbtc()">
+    <br>
+    <input type="text" value="" onfocus="tan1()" onblur="tan2()">
+    <br>
+    <input type="text" onmouseup="tan1()">
+    <br>
+    <span id="span1">这里是失去焦点要改变的颜色内容</span>
+    <br>
+    <!-- 失去焦点改变span内容的颜色 -->
+    <input type="text" name="" id="" onblur="changeColor()">
+    <div id="div1" onmouseout="mouseOut()" onmouseover="mouseOver()">
+        鼠标离开事件要控制的区域
+    </div>
+    <br>
+
+    <!-- 键盘按下 -->
+    <input type="text" value="在这里测试键盘按下" onkeydown="KeyDown()">
+    <br>
+    <input type="text" value="在这里测试键盘弹起" onkeyup="KeyUp()">
+    <br>
+    <!-- 文本框内容改变弹窗 -->
+    <input type="text" value="这里测试内容改变的事件" onchange="textChange()">
+
+</body>
+
+</html>

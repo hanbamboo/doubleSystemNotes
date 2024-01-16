@@ -1,0 +1,29 @@
+a {
+	color: white;
+	background-color: rgba(R, G, B, A);
+	text-decoration: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 6px;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 0.3s;
+}
+input {
+	display: none;
+}
+a:hover {
+	background-color: rgba(255, 255, 255, 0.3)
+}
+
+header {
+	margin: 30px;
+}
+
+body {
+	bgcolor="#13a497";
+	background-image: url(assests/bg-10.jpg);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}

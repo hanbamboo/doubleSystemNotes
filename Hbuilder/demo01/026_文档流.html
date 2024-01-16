@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文档流</title>
+		<!-- html其实是一个多层结构，一层套一层
+		CSS可以为每一层设置样式，用户能看到的是最顶层 
+		html默认都是在第一层的，但是有一些元素可以罗列在第一层的上面
+		html当中第一层所在的位置是文档流
+		元素在html当中有两种状态
+			在文档流当中，
+			脱离文档流
+		块级元素(常见的div)：
+			1.独占一行
+			2.默认宽度是父级元素的宽度
+			3.高度是默认内容撑满的高度
+			4.默认从左侧开始
+		行内元素(常见的span)：
+			1.不独占一行
+			2.内容多大它占多大
+			3.内容从左向右排列
+			4.一行装不下会自动换行
+		块级元素和行内元素可以相互转换，用display，转换之后可能会有问题，效果可能不一样
+		 -->
+		 <style type="text/css">
+		 	#div1{
+				width: 100px;
+				background-color: #aaffff;
+			}
+			#div2{
+				width: 100px;
+				background-color: #ffba41;
+			}
+			
+			span{
+				background-color: #00FF00;
+			}
+		 </style>
+	</head>
+	<body>
+		<div id="div1">
+			div11111
+		</div>
+		<div id="div2">
+			div22222
+		</div>
+		<span>111111111111111111111111111111111111</span>
+		<span>222222222222222222222222222222222222</span>
+		<span>333333333333333333333333333333333333</span>
+	</body>
+</html>

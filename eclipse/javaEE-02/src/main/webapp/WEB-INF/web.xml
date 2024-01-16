@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>javaEE-02</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+	<!-- servlet此标签配置的是servlet的全限定类名 servlet-name：是servlet的别名 FirstServlet servlet-class：是servlet的全限定类名 
+		com.shuangti.web.FirstServlet -->
+	<servlet>
+		<!-- 别名，一般用类名就可以 -->
+		<servlet-name>FirstServlet</servlet-name>
+		<!-- 全限定类名 -->
+		<servlet-class>com.shuangti.web.FirstServlet</servlet-class>
+	</servlet>
+	<!-- 配置请求映射 客户端请求中uri中对应的资源路径地址 -->
+	<servlet-mapping>
+		<!-- 对应上边配置的servlet的别名，两个是一定要严格一致的 -->
+		<servlet-name>FirstServlet</servlet-name>
+		<!-- uri当中项目路径后面的地址 -->
+		<url-pattern>/first</url-pattern>
+	</servlet-mapping>
+</web-app>

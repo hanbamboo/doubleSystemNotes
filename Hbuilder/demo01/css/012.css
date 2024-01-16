@@ -1,0 +1,9 @@
+/* 这里写css的注释 */
+/* 外部样式的文件不需要加style，只有选择器+样式组成 */
+
+h2{
+	color: seagreen;
+}
+.p4{
+	color: blueviolet;
+}

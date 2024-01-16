@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "微软雅黑";
+	height: 100vh;
+	background-image: url(../assests/bg-register.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	/* background: linear-gradient(200deg,#a8edea,#fed6e3); */
+	margin: 0px;
+	paint-order: 0px;
+}
+
+#register-acitve {
+	padding-left: 50px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 15px;
+	width: 500px;
+	height: 550px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+h1 {
+	font-size: 40px;
+	padding-top: 30px;
+}
+
+p {
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+#register-code {
+	width: 170px;
+	margin-right: 5px;
+}
+
+input {
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 45px;
+	width: 300px;
+	padding-left: 10px;
+}
+
+#register-2-reg {
+	text-decoration: none;
+}
+
+#register-sendCode {
+	width: 100px;
+}
+
+.register-item {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+
+#register-code,
+#register-uname,
+#register-pwd,
+#register-phone {
+	border: 1px #FFFFFF solid;
+	border-radius: 5px;
+}
+
+#register-code:hover,
+#register-uname:hover,
+#register-pwd:hover,
+#register-phone:hover{
+	border: 1px #2979FF solid;
+}
+
+#register-code:focus,
+#register-uname:focus,
+#register-pwd:focus,
+#register-phone:focus{
+	outline: 1px #5555ff solid;
+	border: 2px #2979FF solid;
+}
+
+#register-start {
+	width: 350px;
+	border-radius: 30px;
+	border: none;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #55aaff;
+}
+
+#register-start:hover {
+	box-shadow: 0px 5px 5px #4bcbfa;
+}
+#register-sendCode{
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	padding: 0px;
+	border: none;
+}
+#register-sendCode:hover{
+	border: 1px #2979FF solid;
+}
+#register-doc {
+	width: 15px;
+	vertical-align:middle;
+}
+#doc-qdoc,#doc-udoc{
+	text-decoration: none;
+}
+#doc{
+	font-size: 12px;
+	padding: 0px;
+	margin-top: -10px;
+	margin-bottom: 20px;
+	text-align: center;
+	margin-left: -90px;
+	
+}

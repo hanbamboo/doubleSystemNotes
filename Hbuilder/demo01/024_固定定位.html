@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>固定定位fixed</title>
+		<!-- 固定定位和绝对定位非常类似，但是它的参照物是以视口为基准的。
+		和相对定位不同的地方时，无论祖元素有没有设置定位，始终与视口为参照物-->
+		<!-- 注意：固定定位的素不会以随着滚动条上啦下拉而移动 -->
+		<!-- 固定定位的元素会脱离文档流，它的兄弟元素会随之移动 -->
+		<style type="text/css">
+			body {
+				height: 1000px;
+			}
+
+			#div1 {
+				width: 200px;
+				height: 200px;
+				background-color: plum;
+
+			}
+
+			#div2 {
+				width: 300px;
+				height: 300px;
+				background-color: skyblue;
+			}
+
+			#div3 {
+				width: 200px;
+				margin-left: 50px;
+				height: 200px;
+				background-color: salmon;
+				position: fixed;
+				top: -100px;
+				left: 100px;
+			}
+
+			#div4 {
+				width: 300px;
+				height: 300px;
+				background-color: deeppink;
+			}
+
+			#div5 {
+				width: 300px;
+				height: 300px;
+				background-color: darkorange;
+				position: fixed;
+				top: -100px;
+				left: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			div1
+		</div>
+		<div id="div2">
+			div2
+			<div id="div3">
+				div3
+			</div>
+		</div>
+		<div id="div4">
+
+		</div>
+		<div id="div5">
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- from表示整个表单 -->
+		<!-- 表单内的数据是一个整体 -->
+		<!-- action是以后提交按钮发起的请求地址，分为相对路径和绝对路径 -->
+		<!-- 可以将整个表单中数据打包发送 -->
+		<!-- method是请求方式，有两个get,post -->
+		<!-- method对应action发起的请求有这两种 -->
+		<form action="#" method="get">
+			用户名：<input type="text" name="u_name" placeholder="请输入手机号账号" />
+			<br>
+			密码：<input type="password" name="u_pwd" placeholder="请输入密码" />
+			<br>
+			邮箱：<input type="email" />
+			<br>
+			性别：
+			<!-- 单选框必须要加name，name值必须一样才能达到单选的目的 -->
+			<!-- checked="checked" 表示默认选择当前选项 -->
+			<input type="radio" name="sex" checked="checked" />男
+			<input type="radio" name="sex" />女
+			<br>
+			<!-- 无论是单选还是复选框，name都要加上，而且值要一样 -->
+			爱好
+			<input type="checkbox" name="u_hobby" />抽烟
+			<input type="checkbox" name="u_hobby" />喝酒
+			<input type="checkbox" name="u_hobby" />烫头
+			<input type="checkbox" name="u_hobby" />文身
+			<br>
+			上传头像
+			<!-- 文件框可以打开文本磁盘，选择文件，文件最终以io流的形式打包放进Http请求当中中 -->
+			<input type="file" name="u_head" />
+			<br>
+			<!-- select表示下拉框 -->
+			<!-- option表示下拉框当中的每一个选项 -->
+			国家
+			<!-- 下拉单选框 -->
+			<select name="u_local">
+				<option>中国</option>
+				<option>美国</option>
+				<option>俄罗斯</option>
+			</select>
+			<br>
+			<!-- 下拉多选框 -->
+			课程
+			<!-- multiple表示可以多选 -->
+			<!-- 选择的时候要按住Ctrl去选则 -->
+			<select multiple>
+				<option>高数</option>
+				<option>大英</option>
+				<option>线代</option>
+				<option>Java基础</option>
+				<option>MySql</option>
+			</select>
+			<br>
+			<!-- textarea文本域 -->
+			<!-- rows表示默认显示几行文字 -->
+			<!-- cols表示默认显示几列文字 -->
+			个人介绍
+			<textarea rows="3" cols="10" placeholder="请输入"></textarea>
+			<br>
+			<!-- 提交按钮 -->
+			<!-- 提交按钮点击时会提交action，发起对应的url请求，也会相应的相关数据进行打包 -->
+			<!-- value他不会改变这个按钮的行为和性质 -->
+			<input type="submit" value="注册"/>
+			<!-- 重置按钮 -->
+			<!-- 会清空并回复默认选择输入内容 -->
+			<!-- 无论提交还是重置，都要放在from表单中内部才能生效 -->
+			<input type="reset" />
+			
+		</form>
+	</body>
+	
+</html>

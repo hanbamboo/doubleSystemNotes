@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>伪类选择器</title>
+		<!-- 伪类选择器
+				html中一些不存在的类，主要是描述一些元素
+				特殊的状态，比如第一个、最后一个、鼠标停留等等
+				标签:伪类 ，这种就叫做伪类选择器
+				
+			:first-child
+			:last:child
+			:超链接常用 :hover  :visited
+		 -->
+		<style type="text/css">
+			/* 1.将li当中的内容颜色设置为红色 */
+			li {
+				font-size: 30px;
+				color: #0000FF;
+			}
+
+			#ul2>li:first-child{
+				color: #008000;
+			}
+			
+			#ul2>li:last-child{
+				color: #FF55FF;
+			}
+			#ul2>li:nth-child(2){
+				color: #00FFFF;
+			}
+			#ul2>li:hover{
+				color: #FF7F50;
+			}
+			/* 鼠标悬浮链接 */
+			a:hover{
+				color:#2E8B57;
+			}
+			/* 改变已访问过的链接 */
+			a:visited{
+				color: deeppink;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul id="ul1">
+			<li>苹果</li>
+			<li>香蕉</li>
+			<li>菠萝</li>
+		</ul>
+		<ul id="ul2">
+			<li>黄瓜</li>
+			<li>西红柿</li>
+			<li>茄子</li>
+		</ul>
+		<a href="#">耶耶耶</a>
+	</body>
+</html>

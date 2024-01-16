@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.6.0.js"></script>
+
+	</head>
+	<body>
+		<!-- $(选择器).action() -->
+		<!-- 例如$("#id").hide -->
+		<!-- 例如$(".class").hide -->
+		<!-- 例如$("标签名").hide -->
+		<!-- 注意：$是jquery的标志，如果想使用他必须在html中通过脚本块引入js文件,action是动作的意思，他可以是一个单独的方法名，action里面可以嵌套调用函数 -->
+		<!-- 常用的文档准备方法使用：
+			$(doucument).ready(
+				function(){
+					
+				}
+			)
+			
+			$(
+				function(){
+					
+				}
+			)
+			
+		 -->
+		 <!-- jquery知识点：1.选择器2.事件3.获取4.样式5.元素增删改6.ajax -->
+		<p id="p1">dsfadgdhfg</p>
+	</body>
+	<script type="text/javascript">
+		$("#p1").click(
+				function() {
+					alert(56);
+				}
+	</script>
+</html>

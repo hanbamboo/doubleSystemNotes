@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绝对定位absolute</title>
+		<!-- absolute有定位属性的包含块（组元素）为参照物，进行移动，如果祖元素都没有定位属性，以根元素（最大的祖元素）为参照物。
+		
+		有定位属性的包含块，当前元素的上级标签或者上上级标签等等给他的样式添加了position
+		如果当前绝对定位的元素祖元素有多个元素都有定位属性，那么绝对定位的参照物是以离他最近的一个参照，如果都没有那就是body
+		 绝对定位的元素会脱离文档流，但是他不会改变元素的特性
+		元特性也被改变了，比如块元素不再独占一行了。
+		 -->
+		<style type="text/css">
+			#div1 {
+				width: 200px;
+				height: 200px;
+				background-color: #0066CC;
+
+			}
+
+			#div2 {
+				width: 200px;
+				height: 200px;
+				background-color: #4dcc9c;
+				position: absolute;
+				top: -50px;
+				left: 50px;
+			}
+
+			#div3 {
+				width: 200px;
+				height: 200px;
+				background-color: #cc7274;
+				position: relative;
+			}
+
+			#div4 {
+				width: 100px;
+				height: 100px;
+				background-color: #ccc966;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+			}
+
+			#div5 {
+				width: 300px;
+				height: 300px;
+				background-color: #00FF00;
+				/* position: relative; */
+
+			}
+
+			#div6 {
+				width: 200px;
+				height: 200px;
+				background-color: #cc7274;
+			}
+
+			#div7 {
+				width: 200px;
+				height: 200px;
+				background-color: #ffaa00;
+				position: absolute;
+				top: -100px;
+				left: 200px;
+			}
+
+			#div8 {
+				width: 200px;
+				height: 200px;
+				background-color: #2d95cc;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <div id="div1">
+
+		</div>
+		<div id="div2">
+
+		</div>
+		<div id="div5">
+			<div id="div3">
+				<div id="div4">
+
+				</div>
+			</div>
+		</div> -->
+		<div id="div6">
+
+		</div>
+		<div id="div7">
+
+		</div>
+		<div id="div8">
+
+		</div>
+	</body>
+</html>

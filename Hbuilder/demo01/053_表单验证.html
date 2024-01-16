@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单验证</title>
+    <!-- 前端验证对一些业务的相关的数据进行校验 -->
+    <!-- 作用：
+            数据安全
+            前后端两层校验，保证数据的可靠性、前端作为请求发起之前的第一关，数据校验非常重要。
+     -->
+    <script>
+        function checkName() {
+            var u_name = document.getElementById("u_name").value.trim();
+            var u_name_span = document.getElementById("u_name_span");
+            if (u_name == "" || u_name == null) {
+                u_name_span.innerText = "用户名不能为空";
+                u_name_span.style.color = "red";
+            }
+        }
+
+        function delSpanName() {
+            document.getElementById("u_name_span").innerText = "";
+        }
+
+        function checkPwd() {
+            var u_pwd = document.getElementById("u_pwd").value;
+            var u_pwd_span = document.getElementById("u_pwd_span");
+            if (u_pwd.trim().length != 6) {
+                u_pwd_span.innerText = "密码必须为6位";
+                u_pwd_span.style.color = "red";
+            }
+        }
+
+        function delSpanPwd(params) {
+            document.getElementById("u_pwd_span").innerText = "";
+        }
+
+        function checkPhone() {
+            var reg = /^1(3|4|5|7|8)\d{9}$/;
+            var phone = document.getElementById("u_phone").value.trim();
+            var u_phone_span = document.getElementById("u_phone_span");
+
+            if (!reg.test(phone)) {
+                u_phone_span.innerText = "格式非法";
+                u_phone_span.style.color = "red";
+            }
+        }
+
+        function delSpanPhone() {
+            document.getElementById("u_phone_span").innerText = "";
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" method="">
+        <!-- input类型有哪些
+                -text
+                -password
+                -button
+                -submit
+                -reset
+                -checkbox
+                -radio
+                -email 
+        -->
+        用户名 <input type="text" id="u_name" placeholder="请输入昵称或账号" onblur="checkName()" onfocus="delSpanName()" />
+        <span id="u_name_span"></span>
+        <br> 密&nbsp; &nbsp;码
+        <input type="password" id="u_pwd" placeholder="请输入密码" onblur="checkPwd()" onfocus="delSpanPwd()">
+        <span id="u_pwd_span"></span>
+        <br> 手机号
+        <input type="text" id="u_phone" placeholder="请输入手机号" onblur="checkPhone()" onfocus="delSpanPhone()">
+        <span id="u_phone_span"></span>
+        <br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+		<a href="">没有账号，去注册</a>
+
+    </form>
+
+</body>
+
+</html>

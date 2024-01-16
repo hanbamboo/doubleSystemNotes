@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean是spring创建的对象，统称bean User user = new User(); id相当于对象变量名 class值为全限定类名(包名+类名) 
+		scope属性默认是单例模式singleton (默认)单例模式singleton - 只会创建一个实例对象，每获取一次bean就是相同的 多例模式prototype 
+		- 会创建多个实例对象，每获取一次bean就会new一个新的 lazy-init属性默认懒加载 false - spring初始化时就会创建该对象 
+		true - 初始化不会创建，在获取对象才会创建 -->
+	<bean id="user" class="com.mvnproject.spring1.User"></bean>
+	<bean id="user1" class="com.mvnproject.spring1.User"
+		lazy-init="true"></bean>
+	<bean id="stu" class="com.mvnproject.spring1.Student">
+		<!-- setter注入 name对应属性名 value对应属性值 -->
+		<property name="name" value="张三"></property>
+		<property name="age" value="20"></property>
+		<!-- bean注入，ref之相对应谁属性类型的beanddi -->
+		<property name="user" ref="user"></property>
+
+	</bean>
+	<!-- <bean id="stu1" class="com.mvnproject.spring1.Student"> 构造器注入 name对应属性名 
+		value对应属性值 <constructor-arg index="0" value="李四" /> <constructor-arg index="1" 
+		value="30" /> <constructor-arg index="2" ref="user" /> </bean> -->
+
+
+	<bean id="student2" class="com.mvnproject.spring1.Student">
+		<property name="name" value="王五"></property>
+		<property name="age" value="40"></property>
+		<property name="user" ref="user1"></property>
+		<property name="hobby">
+			<array>
+				<value>抽烟</value>
+				<value>喝酒</value>
+			</array>
+		</property>
+		<property name="ad">
+			<set>
+				<value>唱歌</value>
+				<value>跳舞</value>
+			</set>
+		</property>
+		<property name="discible">
+			<map>
+				<entry key="183" value="70"></entry>
+				<entry key="100" value="90"></entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

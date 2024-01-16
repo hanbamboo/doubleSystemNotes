@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <script src="jquery-3.6.0.js"></script>
+  <title></title>
+  <!-- jQuery选择器
+   元素
+   id
+   class
+   复合
+   选择器组
+   关系选择器
+   伪类
+   伪元素
+   jQuery当中使用选择器是为了获取元素
+   语法：$("选择器")
+   $() 像这种（）里面没有内容，默认是dom对象，相当于$(document)
+   -->
+  <!-- 点击P元素弹窗 -->
+  <!-- 步骤：
+    1.先让整个文档加载完成
+    $(document).ready(
+     function(){
+      
+     }
+    )
+    2.通过选择器获取元素$("#id")、$(".class")
+    3.绑定事件
+    $("选择器").click(){
+     function(){
+      
+     } 
+    }
+    4.function(){
+     弹窗
+    }
+    
+    -->
+  <script type="text/javascript">
+  // 元素选择器
+   /* $(document).ready(
+   function() {
+    $("#p1").click(
+    function() {
+     alert(5555);
+    }
+    )
+    }
+   ) */
+   $(document).ready(
+   function() {
+    $(".p_class").click(
+    function() {
+     alert(5555);
+    }
+    )
+    }
+   )
+   
+  </script>
+ </head>
+ <body>
+  <p id="p1" class="p_class">p元素内容</p >
+ </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关系选择器</title>
+		<!-- 关系选择器
+			关系:html当中与标签之间的联系
+			关系分类：
+				父元素  直接包含子元素
+				子元素  直接被父元素包含的元素
+				祖元素  间接包含子元素的父元素
+				后代元素  间接被祖元素包含的子元素
+				兄弟元素  同一个父元素的元素
+			语法：
+				父元素>子元素{
+					样式名:样式值;
+					样式名:样式值;
+					....
+				}
+				父子选择器当中父子元素一定要是直接包含的关系
+				后代选择器
+				
+				祖元素 子元素{
+					样式名:样式值;
+					样式名:样式值;
+					....
+				}
+				后代选择器中祖元素和子元素师直接和间接包含的关系
+				兄弟元素1+兄弟元素2(只能选择一个){
+					样式名:样式值;
+					样式名:样式值;
+					....
+				}
+				兄弟元素1~兄弟元素2{
+					样式名:样式值;
+					样式名:样式值;
+					....
+				}
+
+				
+		 -->
+		 <style type="text/css">
+		 	/* 通过关系选择器改变div1下的p1元素的内容颜色为红色 */
+			
+			#div2>#h1{
+				color: #0000FF;
+			}
+			#div3 #p2{
+				color: red;
+			}
+			#span2+#span3{
+				color: #008000;
+			}
+			#span4~#span5{
+				color: #8A2BE2;
+			}
+			.span6~.span7{
+				color: #00FFFF;
+			}
+		 </style>
+	</head>
+	<body>
+		
+		<div id="div1">
+			<p id="p1">div1当中第一个p标签的内容</p>
+		</div>
+		<div id="div2">
+			<h1 id="h1">div2当中第一个h1标签的内容</h1>
+		</div>
+		<div id="div3">
+			<span id="span1">
+				<p id="p2">div3当中第一个span第一个p标签的内容</p>
+			</span>
+			<span id="span2">div3当中第二个span的内容</span>
+			<span id="span3">div3当中第三个span的内容</span>
+			<br>
+			<span id="span4">div3当中第四个span的内容</span>
+			<span id="span5">div3当中第五个span的内容</span>
+			<br>
+			<span class="span6">div3当中第六个span的内容</span>
+			<span class="span7">div3当中第七个span的内容</span>
+			<span class="span7">div3当中第八个span的内容</span>
+		</div>
+	</body>
+</html>

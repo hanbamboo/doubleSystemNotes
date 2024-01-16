@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js数组</title>
+		<!-- java定义数组： 
+				int[] a = {1,2,3,4};
+				int[] b = new int[5];
+				int[] c = new int[]{};
+		-->
+		<!-- js定义数组：
+				var 数组变量名 = [];
+				var 数组变量名 = new Array(数组大小);
+		 -->
+		<!-- js当中的一个数组可以存放不同数据类型的数据
+					比如:var array = [1,"22",false,null];
+		  -->
+
+		<!-- 第一種方式 -->
+		<script type="text/javascript">
+			// 定义一个数组array1，然后输出第一个数
+			var array1 = [1, 2, 3, 4];
+			console.log(array1[0]);
+		</script>
+		<!-- 第二种方式 -->
+		<script type="text/javascript">
+			// 定义了一个长度为3的数组
+			var array2 = new Array(3);
+			// 这种方式定义的数组存的值默认都是undefined类型
+			array2[0] = 'd';
+			array2[1] = 's';
+			array2[5] = 'a'; //js当中不会报数组越界
+			console.log(array2);
+		</script>
+		<!-- js当中遍历数组-->
+		<script type="text/javascript">
+			var a = [1, 2, 3, 4, 5];
+			for (var b = 0; b < a.length; b++) {
+				console.log(a[b]);
+			}
+			for(var i in a){
+				console.log(a[i]);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

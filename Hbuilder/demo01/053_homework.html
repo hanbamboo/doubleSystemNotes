@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动箱子</title>
+    <style>
+        #wall {
+            width: 800px;
+            height: 500px;
+            background-color: blueviolet;
+            position: relative;
+        }
+        
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            position: absolute;
+        }
+    </style>
+    <script>
+        var xmax = 800;
+        var ymax = 500;
+        var x = 0;
+        var y = 0;
+
+        function KeyPress() {
+            var key = event.keyCode;
+            var box = document.getElementById("box");
+            var box_shape = 100;
+            if (key == 100 && xmax > 100) {
+
+                x = x + box_shape;
+                xmax = xmax - box_shape;
+                box.style.left = x + "px";
+
+            }
+            if (key == 97 && xmax < 800) {
+                x = x - box_shape;
+                xmax = xmax + box_shape;
+                box.style.left = x + "px";
+
+            }
+            if (key == 119 && ymax < 500) {
+                y = y - box_shape;
+                ymax = ymax + box_shape;
+                box.style.top = y + "px";
+            }
+            if (key == 115 && ymax > 100) {
+                y = y + box_shape;
+                ymax = ymax - box_shape;
+                box.style.top = y + "px";
+
+            }
+
+        }
+
+        function reStart() {
+            xmax = 800;
+            ymax = 500;
+            x = 0;
+            y = 0;
+            document.getElementById("box").style.left = "0px";
+            document.getElementById("box").style.top = "0px";
+        }
+    </script>
+</head>
+
+<body onkeypress="KeyPress()" onclick="reStart()">
+    <div id="wall">
+        <div id="box"></div>
+    </div>
+</body>
+
+</html>

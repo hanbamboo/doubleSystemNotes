@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BOM</title>
+		 <!-- BOM包含DOM -->
+		<!-- BOM:(Brower Object Model)浏览器对象模型
+				可以认为是把整个浏览器作为一个对象，他有属性和方法
+			 BOM下的Window对象又又细分常用的对象：
+				-location：
+					可以获取浏览器地址信息
+				-history：
+					可以获取浏览器历史记录
+						--back 
+							回到上一次浏览页面，相当于浏览器左箭头
+						--forward 
+							跳转下一次浏览页面，相当于浏览器右箭头
+				-navigator：
+					可以获取浏览器的信息
+				-screen：
+					可以获取浏览器屏幕相关信息
+			 BOM下Window对象的方法
+				-alert()
+				-prompt()
+				-close()
+				-setTimeOut() 
+					按照指定毫秒数后调用函数或计算表达式
+						--setTimeOut(函数或表达式,1000);
+							在1000毫秒以后调用函数或表达式
+				-setInterval()
+					按照指定周期(以毫秒)来调用函数或表达式
+						--setInterval(函数或表达式,1000);
+		 -->
+		
+		 <!-- location 获取浏览器地址栏地址 -->
+		 <script type="text/javascript">
+		 	console.log(location.href);
+			// console.log(window.location.href);
+			
+		 </script>
+		 <!-- history 获取浏览器历史记录-->
+		 <script type="text/javascript">
+		 	console.log(navigator.appName);
+			console.log(navigator.userAgent);
+		 </script>
+		 <!-- Screen -->
+		 <script type="text/javascript">
+		 	console.log(screen.width);
+			console.log(screen.height);
+		 </script>
+		 <script type="text/javascript">
+		 	function closeWindow(){
+				window.close();
+			}
+		 </script>
+		 <script type="text/javascript">
+		 	//浏览器10秒后弹出窗口
+			
+			// setTimeout(function(){
+			// 	// console.log(11);
+			// 	alert(333);
+			// },3000);
+		 </script>
+		 <!-- 每隔一秒弹窗一次 -->
+		 <script type="text/javascript">
+		 // 	setInterval(function(){
+			// 	// alert(1);
+			// },1000);
+		 </script>
+	</head>
+	<body>
+		<a id="a1" href="050_1.html">二级页面</a>
+		<!--  onclick是 标签的属性，也是事件句柄 
+				可以用来监听或绑定js事件或方法
+		-->
+		<button type="button" onclick="closeWindow()">点击关闭</button>
+		
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM</title>
+		<!-- DOM全称叫Document Object Model 文档对象模型 
+				可以把他认为是当前的html文件作为一个大的对象
+			1.document.write
+				document.writeln() 写入并换行
+				可以往网页当中添加文本内容
+			2.获取文档中的元素对象
+				-getElementById();
+					这个是document对象的一个方法，此方法是可以通过元素的id值获取到整个元素作为一个对象
+					innerText和innerHTML这俩是有区别的
+					--innerText
+						将文本整个作为元素的内容添加进去的
+					--innerHTML
+						将文本带格式加入到元素的内容
+				-getElementsByClassName()
+					通过元素的class对应值可以获取元素对象，但是这个对象是一个数组
+				-getElementName()
+					通过元素的name属性值来获取元素对象，
+					用的比较少，了解即可
+			注意：以上两种获取对象的方式不一样：
+					byId由于id唯一的特性他可以通过id值就可以定位到唯一的元素
+					byClassName由于class重复的特定，他定位的是多个对象，而且这多个对象放在了一个数组里面。
+						
+				
+		-->
+		<script type="text/javascript">
+			document.write("通过write方法写入的内容");
+		</script>
+	</head>
+
+	<body>
+		<span id="span1">这里是span1的内容</span><br>
+		<button type="button" onclick="changeColor()">点击span1变红</button><br>
+		<button type="button" onclick="changeText()">点击span1改变蚊子内容</button><br>
+		<button type="button" onclick="changeStyleI()">点击span1改变蚊子内容并倾斜</button>
+		<br>
+		<input type="text" class="input1" value="输入框默认值" />
+		<!-- 通过点击按钮获取输入框的文本 -->
+		<button type="button" onclick="getTextContent()">得到输入框内容</button>
+	</body>
+	<!-- 获取文档中的对象
+			为什么此js脚本块放在下面，因为不放在下面的话获取到的是null，因为通过document.getElementById("span1")获取span对象之前它还没有加载出来，所以要放在后面。
+	 -->
+	<script type="text/javascript">
+		console.log(document.getElementById("span1"));
+		// 获取到元素对象的内容
+		console.log(document.getElementById("span1").textContent);
+
+
+		function changeColor() {
+			// 通过获取span1对象， 并改变他的颜色
+
+			document.getElementById("span1").style.color = "red";
+
+		}
+		function changeText(){
+			// 点击按钮改变span1文字
+			document.getElementById("span1").innerText = "改变的内容";
+		}
+		function changeStyleI(){
+			// 点击按钮改变span1文字并倾斜
+			document.getElementById("span1").innerHTML="<i>改变完成</i>";
+			
+		}
+		function getTextContent(){
+			// 通过元素的Class值可以获取元素对象，但是这个对象是一个数组
+			console.log( document.getElementsByClassName("input1")[0].value);
+			alert(document.getElementsByClassName("input1")[0].value);
+			
+		}
+	</script>
+</html>

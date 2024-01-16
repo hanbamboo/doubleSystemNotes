@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>获取</title>
+		<script src="jquery-3.6.0.js"></script>
+		<!-- text() 可以设置或获取元素的内容,
+     注意和后面要讲的追加不一样。
+     text如果想要设置元素的内容的话，会把原来的内容替换掉
+   HTML() 带格式设置或获取元素的内容
+   val() 设置或获取元素的值，常用来获取input框的值
+   -->
+		<!-- 点击span替换内容 -->
+		
+		<script type="text/javascript">
+		
+			$(document).ready(
+				function() {
+					$("#span1").append("<br>span追加的内容")
+				}
+			)
+					document.getElementById("i1").innerText= "11";
+			
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(
+				function() {
+					$("#div1").click(
+						function() {
+							$("#div1").html("<b>奥利给</b>")
+						}
+					)
+
+				}
+			)
+			window.sessionStorage.setItem()
+		</script>
+		<script type="text/javascript">
+			$(document).ready(
+				function() {
+					$("#i1").focus(
+						function() {
+							$("#i1").val("1324356457")
+						}
+					)
+		
+				}
+			)
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			奥迪卡
+		</div>
+		<span id="span1">
+			span的内容
+		</span>
+		<input type="text"  id="i1" value="66666" />
+		<a onlayoutcomplete=""></a>
+	</body>
+</html>
